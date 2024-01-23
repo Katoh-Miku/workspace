@@ -1,0 +1,12 @@
+/*------------------------------
+  container
+------------------------------*/
+@use "../base/variable" as *;
+@use "../base/mixin" as *;
+
+.container {
+  max-width: $width;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}

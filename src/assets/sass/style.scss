@@ -1,0 +1,48 @@
+@charset "UFT-8";
+//-------------------------------------------
+// setting 関数, media query,mixin
+//-------------------------------------------
+@forward "base/variable";
+@forward "base/mq";
+@forward "base/mixin";
+
+//-------------------------------------------
+// setting 初期設定, リセット
+//-------------------------------------------
+@use "base/reset";
+@use "base/base";
+@use "base/form";
+
+//-------------------------------------------
+// layout
+//-------------------------------------------
+// @use "layout/header";
+// @use "layout/gnav";
+// @use "layout/menu";
+// @use "layout/hamburger";
+// @use "layout/sp-gnav";
+// @use "layout/footer";
+// @use "layout/breadcrumb";
+@use "layout/container";
+@use "layout/section";
+@use "layout/grid";
+
+//-------------------------------------------
+// component
+//-------------------------------------------
+// @use "component/btn";
+// @use "component/heading";
+// @use "component/pd-card";
+// @use "component/pd-category";
+
+//-------------------------------------------
+// page
+//-------------------------------------------
+// @use "page/news";
+// @use "page/rentalbox";
+// @use "page/profile";
+
+//-------------------------------------------
+// other
+//-------------------------------------------
+@use "other/utilities";

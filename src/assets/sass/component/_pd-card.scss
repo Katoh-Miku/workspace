@@ -1,0 +1,51 @@
+/*------------------------------
+  product card
+------------------------------*/
+@use "../base/variable" as *;
+@use "../base/mixin" as *;
+
+.pd-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  &__thumb {
+    position: relative;
+    content: "";
+    display: block;
+    padding-top: calc((182/305)*100%);
+    order: -1;
+    
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    margin-top: 30px;
+    padding-bottom: 5px;
+    font-size: fz(18);
+    border-bottom: 1px dashed currentColor;
+  }
+  &__text {
+    font-size: fz(14);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &__price {
+    margin-top: auto;
+    text-align: right;
+    font-weight: 700;
+    & > span {
+      font-size: fz(12);
+      font-weight: 400;
+    }
+  }
+  &__btn {
+    margin-top: 10px;
+  }
+}

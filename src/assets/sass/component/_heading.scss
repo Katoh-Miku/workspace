@@ -1,0 +1,56 @@
+/*------------------------------
+  heading (トップページ 大見出し)
+------------------------------*/
+@use "../base/variable" as *;
+@use "../base/mixin" as *;
+
+.heading-lv2 {
+  display: flex;
+  align-items: center;
+  & + * {
+    margin-top: 20px;
+  }
+  &__title {
+    font-size: fz(24);
+    padding-bottom: 5px;
+    border-bottom: 2px solid $c_key1;
+    flex-grow: 1;
+  }
+  // 猫アイコン 付き
+  &.--icon::before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 47px;
+    margin-right: 10px;
+    background: url(../img/ico_cat.svg) left bottom / contain no-repeat;
+  }
+  // ボタン 付き
+  &.--btn {
+    position: relative;
+    & .heading-lv2__btn {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+@include mq(md) {
+  .heading-lv2 {
+    & + * {
+      margin-top: 40px;
+    }
+    &__title {
+      font-size: fz(30);
+    }
+    // 猫アイコン 付き
+    &.--icon::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 67px;
+      margin-right: 15px;
+      background: url(../img/ico_cat.svg) left bottom / contain no-repeat;
+    }
+  }
+}

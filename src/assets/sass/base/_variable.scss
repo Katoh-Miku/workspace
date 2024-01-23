@@ -1,0 +1,54 @@
+//-------------------------------------
+//  variable
+//-------------------------------------
+
+// ページの全体の横幅（標準）
+$width: 1200px;
+
+// ページの全体の横幅（中間）
+$width_md: 800px;
+
+// 標準font-family
+$font_sans: "Noto Sans JP", sans-serif;
+
+//白黒
+$c_white: #ffffff;
+$c_black: #000000;
+
+//グレー
+$c_gray1: #dddddd;
+$c_gray2: #707070;
+// $c_gray2: #BEBEBE;
+// $c_gray3: #707070;
+// $c_gray4: #E8E8E9;
+// $c_gray5: #505050;
+
+//キーカラー
+$c_key1: #ceb967;
+$c_key2: #f5efd7;
+$c_key3: #a88e25;
+
+//黄色系
+// $c_yellow1: #FFD800;
+
+//青系
+// $c_blue1: #1286EA;
+// $c_blue2: #3D98B4;
+// $c_blue3: #BAF4FF;
+
+//緑系
+// $c_green1: #02964E;
+// $c_green2: #EEF3F1;
+
+//赤系
+$c_red1: #f7320e;
+// $c_red2: #F7E6E9;
+// $c_red3: #FCF2F2;
+
+// 標準テキストカラー
+$c_text: #341e12;
+
+// リンクカラー
+$c_link: $c_text;
+$c_hover: $c_key3;
+$c_active: $c_key3;

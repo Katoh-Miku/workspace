@@ -1,0 +1,25 @@
+/*------------------------------
+  product category
+------------------------------*/
+@use "../base/variable" as *;
+@use "../base/mixin" as *;
+
+.pd-category {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  transition: all 0.3s;
+  
+  &:hover, &:focus {
+    background-color: $c_key2;
+    color: inherit;
+  }
+  &__thumb {
+    width: 36%;
+  }
+  &__title {
+    margin: 0 4%;
+    width: calc(64% - 8%);
+  }
+}
