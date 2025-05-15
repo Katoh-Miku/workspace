@@ -4,35 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <meta name="description" content="サイトの説明が入ります。ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- OGP画像の差し替えはこちら -->
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="”twitter:card”" content="summary_large_image" />
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet" />
+    <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./assets/script/libs/scroll-polyfill.js" defer></script>
+    <script src="./assets/script/libs/scroll.js" defer></script>
+
+    <script src="./assets/script/main.js" defer></script>
   </head>
   <body>
-    <header></header>
-    <nav></nav>
-    <main>
-      <div class="container">
-        <div class="js-addText">2秒後に要素を追加します。</div>
-        <ul class="grid grid--pc5col js-target">
-          <li class="grid__item js-addNode"></li>
-          <li class="grid__item js-addNode"></li>
-          <li class="grid__item"></li>
-          <li class="grid__item"></li>
-          <li class="grid__item"></li>
-        </ul>
-        <div>=============================================</div>
-        <ul class="grid grid--pc5col js-target">
-          <li class="grid__item js-addNode"></li>
-          <li class="grid__item js-addNode"></li>
-          <li class="grid__item"></li>
-          <li class="grid__item"></li>
-          <li class="grid__item"></li>
-        </ul>
-      </div>
-    </main>
-    <footer></footer>
-    <script src="./assets/js/script.js"></script>
+    <div class="site_wrapper">
+      <header></header>
+      <nav></nav>
+      <main>
+        <div class="container">
+          <p>Hello world!!</p>
+          <img src="./assets/image/image-1.jpg" alt="サンプル画像" />
+        </div>
+      </main>
+      <footer></footer>
+    </div>
   </body>
 </html>
