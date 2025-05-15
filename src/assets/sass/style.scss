@@ -2,16 +2,16 @@
 //-------------------------------------------
 // setting 関数, media query,mixin
 //-------------------------------------------
-@forward "base/variable";
-@forward "base/mq";
-@forward "base/mixin";
+@forward 'base/variable';
+@forward 'base/mq';
+@forward 'base/mixin';
 
 //-------------------------------------------
 // setting 初期設定, リセット
 //-------------------------------------------
-@use "base/reset";
-@use "base/base";
-@use "base/form";
+@use 'base/reset';
+@use 'base/base';
+@use 'base/form';
 
 //-------------------------------------------
 // layout
@@ -23,15 +23,16 @@
 // @use "layout/sp-gnav";
 // @use "layout/footer";
 // @use "layout/breadcrumb";
-@use "layout/container";
-@use "layout/section";
-@use "layout/grid";
+@use 'layout/container';
+@use 'layout/section';
+@use 'layout/grid';
 
 //-------------------------------------------
 // component
 //-------------------------------------------
-@use "component/appear";
-@use "component/cover-slide";
+@use 'component/animation';
+// @use "component/appear";
+// @use "component/cover-slide";
 // @use "component/btn";
 // @use "component/heading";
 // @use "component/pd-card";
@@ -40,6 +41,7 @@
 //-------------------------------------------
 // page
 //-------------------------------------------
+@use 'page/top';
 // @use "page/news";
 // @use "page/rentalbox";
 // @use "page/profile";
@@ -47,4 +49,4 @@
 //-------------------------------------------
 // other
 //-------------------------------------------
-@use "other/utilities";
+@use 'other/utilities';
