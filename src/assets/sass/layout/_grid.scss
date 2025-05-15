@@ -1,14 +1,21 @@
 /*------------------------------
   grid
 ------------------------------*/
-@use "../base/variable" as *;
-@use "../base/mq" as *;
-@use "../base/mixin" as *;
+@use '../base/variable' as *;
+@use '../base/mq' as *;
+@use '../base/mixin' as *;
 
 /* 商品リスト レイアウト 3カラム */
 .grid {
   display: grid;
   gap: 20px;
+}
+
+/* PC 2カラム */
+.grid--2col {
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* PC 3カラム */
@@ -22,5 +29,34 @@
   }
   @include mq(lg) {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* PC 4カラム */
+.grid--pc4col {
+  @include mq(sm) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mq(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* PC 5カラム */
+.grid--pc5col {
+  @include mq(sm) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  @include mq(md) {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mq(lg) {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
