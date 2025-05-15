@@ -414,173 +414,127 @@ input[type=checkbox]:checked + span:after {
   }
 }
 
-/*------------------------------
-  appear
-------------------------------*/
-.appear.up .item {
-  transition: all 0.8s;
-  opacity: 0;
-  transform: translateY(6px);
+/*-------------------------------------
+animation
+-------------------------------------*/
+/* fadein */
+.anime-fadeinList.up .item {
+  transform: translateY(10px);
 }
-.appear.up.inview .item {
+
+.anime-fadeinList.down .item {
+  transform: translateY(-10px);
+}
+
+.anime-fadeinList.left .item {
+  transform: translateX(40px);
+}
+
+.anime-fadeinList.right .item {
+  transform: translateX(-40px);
+}
+
+.anime-fadeinList .anime-fadeinItem {
+  transition: all 1s;
+  opacity: 0;
+}
+.anime-fadeinList.is-inview .anime-fadeinItem {
   opacity: 1;
   transform: none;
 }
-.appear.up.inview .item:nth-child(1) {
-  transition-duration: 0.5s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(1) {
+  transition-delay: 0.1s;
 }
-.appear.up.inview .item:nth-child(2) {
-  transition-duration: 1s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(2) {
+  transition-delay: 0.2s;
 }
-.appear.up.inview .item:nth-child(3) {
-  transition-duration: 1.5s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(3) {
+  transition-delay: 0.3s;
 }
-.appear.up.inview .item:nth-child(4) {
-  transition-duration: 2s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(4) {
+  transition-delay: 0.4s;
 }
-.appear.up.inview .item:nth-child(5) {
-  transition-duration: 2.5s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(5) {
+  transition-delay: 0.5s;
 }
-.appear.up.inview .item:nth-child(6) {
-  transition-duration: 3s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(6) {
+  transition-delay: 0.6s;
 }
-.appear.up.inview .item:nth-child(7) {
-  transition-duration: 3.5s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(7) {
+  transition-delay: 0.7s;
 }
-.appear.up.inview .item:nth-child(8) {
-  transition-duration: 4s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(8) {
+  transition-delay: 0.8s;
 }
-.appear.up.inview .item:nth-child(9) {
-  transition-duration: 4.5s;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(9) {
+  transition-delay: 0.9s;
 }
-.appear.up.inview .item:nth-child(10) {
-  transition-duration: 5s;
-}
-
-/*------------------------------
-  cover-slide
-------------------------------*/
-img {
-  max-width: 100%;
-  vertical-align: bottom;
+.anime-fadeinList.is-inview .anime-fadeinItem:nth-child(10) {
+  transition-delay: 1s;
 }
 
-.cover-slide {
-  position: relative;
-  overflow: hidden;
+.anime-fadein.up {
+  transform: translateY(10px);
 }
-.cover-slide::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #eaebe6;
+
+.anime-fadein.down {
+  transform: translateY(-10px);
+}
+
+.anime-fadein.left {
+  transform: translateX(40px);
+}
+
+.anime-fadein.right {
+  transform: translateX(-40px);
+}
+
+.anime-fadein {
+  transition: all 0.8s;
   opacity: 0;
 }
-.cover-slide.inview::after {
+.anime-fadein.is-inview {
   opacity: 1;
-  animation-name: kf-cover-slide;
-  animation-duration: 1.6s;
-  animation-timing-function: ease-in-out;
+  transform: none;
+}
+
+/* zoomin */
+.anime-zoomin {
+  opacity: 0;
+}
+.anime-zoomin.is-inview {
+  animation-name: kf-zoomin;
+  animation-duration: 1s;
+  animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
 
-@keyframes kf-cover-slide {
-  0% {
-    transform-origin: left;
-    transform: scaleX(0);
-  }
-  50% {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-  50.1% {
-    transform-origin: right;
-    transform: scaleX(1);
-  }
-  100% {
-    transform-origin: right;
-    transform: scaleX(0);
-  }
-}
-.img-zoom, .bg-img-zoom {
-  opacity: 0;
-}
-.inview .img-zoom, .inview .bg-img-zoom {
-  opacity: 1;
-  transition: transform 0.3s ease;
-  animation-name: kf-img-show;
-  animation-duration: 1.6s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-}
-.inview .img-zoom:hover, .inview .bg-img-zoom:hover {
-  transform: scale(1.05);
-}
-
-@keyframes kf-img-show {
+@keyframes kf-zoomin {
   0% {
     opacity: 0;
+    transform: scale(0.8);
   }
-  50% {
-    opacity: 0;
-  }
-  50.1% {
-    opacity: 1;
-    transform: scale(1.5);
+  60% {
+    opacity: 0.5;
+    transform: scale(1.05);
   }
   100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
-.hover-darken::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: background-color 0.3s ease;
-  pointer-events: none;
-  animation-name: kf-img-show;
-  animation-duration: 1.6s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-}
-.hover-darken:hover::before {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.bg-img-zoom {
-  background-image: url(images/image-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-}
-
-.img-bg50 {
-  position: relative;
-}
-.img-bg50::before {
-  display: block;
-  content: "";
-  padding-top: 50%;
-}
-
+/*------------------------------
+	layout
+------------------------------*/
+/*------------------------------
+	component
+------------------------------*/
+/*------------------------------
+  top
+------------------------------*/
 /*-------------------------------------
   utilities
 -------------------------------------*/
